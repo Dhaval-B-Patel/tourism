@@ -1,0 +1,170 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style1.css">
+		
+		
+		<script type="text/javascript">
+		
+		function val(){
+		var flag=0;
+		var fname=document.getElementById("fn").value;
+		var lname=document.getElementById("ln").value;
+		var dob=document.getElementById("dob").value;
+		var cont=document.getElementById("con").value;
+		var email=document.getElementById("email").value;
+		var uname=document.getElementById("uname").value;
+		var pas=document.getElementById("pass").value;
+		
+		var contact=/^[0-9]{10}$/;
+		var em=/^[a-zA-Z0-9_-]+\@[a-zA-Z0-9]+\.[A-Za-z]{2,5}$/;
+		
+		if(fname==""){
+			document.getElementById("fnerror").innerHTML="Enter First Name";
+			flag=1;
+			}
+			else{
+			document.getElementById("fnerror").innerHTML="";
+			}
+			
+		if(lname==""){
+			document.getElementById("lnerror").innerHTML="Enter Last Name";
+			flag=1;
+			}
+			else{
+			document.getElementById("lnerror").innerHTML="";
+			}
+
+		if(dob==""){
+			document.getElementById("doberror").innerHTML="Enter Date of birth";
+			flag=1;
+			}
+			else{
+			document.getElementById("doberror").innerHTML="";
+			}
+
+		if(cont==""){
+			document.getElementById("conerror").innerHTML="Enter Name";
+			flag=1;
+			}
+			else{
+			document.getElementById("conerror").innerHTML="";
+				if(contact.test(cont)==false)
+				{
+				document.getElementById("conerror").innerHTML="Enter 10 digits";
+				flag=1;
+				}
+				else{
+				document.getElementById("conerror").innerHTML="";
+				}
+			}
+
+		if(email==""){
+			document.getElementById("emailerror").innerHTML="Enter Email Address";
+			flag=1;
+			}
+			else{
+			document.getElementById("emailerror").innerHTML="";
+				if(em.test(email)==false)
+				{
+				document.getElementById("emailerror").innerHTML="enter vaild email";
+				flag=1;
+				}
+				else{
+				document.getElementById("emailerror").innerHTML="";
+				}
+			}
+			
+		if(uname==""){
+			document.getElementById("unameerror").innerHTML="Enter User Name";
+			flag=1;
+			}
+			else{
+			document.getElementById("unameerror").innerHTML="";
+			}
+				
+		if(pas==""){
+			document.getElementById("passerror").innerHTML="Enter Password";
+			flag=1;
+			}
+			else{
+			document.getElementById("passerror").innerHTML="";
+			}
+		
+		if(flag==1){
+		return false;
+		}
+		
+		}
+		
+		</script>
+	</head>
+	<body>
+<header>
+		<title>GUJARAT TOURISM</title>
+</header>	
+
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="Gujarat.html">Tourism</a></li>
+  <li><a href="contactus.html">Contact US</a></li>
+  <li class="dropdown">
+  <button class="dropbtn">Register/login</button>
+  <div class="dropdown-content">
+    <a href="login.html">Login</a>
+    <a href="register.html">register</a>
+  </div>
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;font-size: 40px;">
+		<br><br><br>
+	<center>
+		<form action="sr.php" method="get">
+		<table>
+			
+			<tr>
+					<td style="font-size:30px;">F_Name:</td>
+					<td><input type="text" id="fn" name="fname" style="font-size:30px;"></td>
+					<td><p id="fnerror" style="color:red"></p></td>
+			</tr>
+			<tr>
+					<td style="font-size:30px;">L_Name:</td>
+					<td><input type="text" id="ln" name="lname" style="font-size:30px;"></td>
+					<td><p id="lnerror" style="color:red"></p></td>
+			</tr>
+			<tr>
+					<td style="font-size:30px;">BOD:</td>
+					<td><input type="date" id="dob" name="dob" style="font-size:30px;"></td>
+					<td><p id="doberror" style="color:red"></p></td>
+			</tr>
+			<tr>
+					<td style="font-size:30px;">ContactNo:</td>
+					<td><input type="number" id="con" name="no" style="font-size:30px;"></td>
+					<td><p id="conerror" style="color:red"></p></td>
+			</tr>
+			<tr>
+					<td style="font-size:30px;">Email:</td>
+					<td><input type="text" id="email" name="email" style="font-size:30px;"></td>
+					<td><p id="emailerror" style="color:red"></p></td>
+			</tr>
+			<tr>	
+					<td style="font-size:30px;">Username:</td>
+					<td><input type="text" id="uname" name="uname"style="font-size:30px;"></td>
+					<td><p id="unameerror" style="color:red"></p></td>
+			</tr>
+			<tr>
+					<td style="font-size:30px;">Password:</td>
+					<td><input type="Password" id="pass" name="pass" style="font-size:30px;"></td>
+					<td><p id="passerror" style="color:red"></p>
+			</tr>
+			</tr>
+			<tr>
+					<td></td>
+					<td><input type="submit" value="Register" name="" onclick="javascrpit:return val();"style="width:4.5cm;height:1cm;"></td>
+			</tr>
+		</table>
+	
+	</form>
+	</div>
+	
+</body>
+</html>	

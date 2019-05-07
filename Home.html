@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style1.css">
+		<link rel="stylesheet" href="css/#.css">
+
+	</head>
+
+<body>
+<!--==============================header=================================-->
+
+<header>
+		<title>GUJARAT TOURISM</title>
+</header>	
+
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="Gujarat.html">Tourism</a></li>
+  <li><a href="contactus.html">Contact US</a></li>
+  <li class="dropdown">
+  <button class="dropbtn">Register/login</button>
+  <div class="dropdown-content">
+    <a href="login.html">Login</a>
+    <a href="register.html">register</a>
+  </div>
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+  <h1>GUJARAT TOURISM</h1>
+ 
+  <h3>Gujarat is the 6th largest state in India, located in the western part of India with a coastline of 1600 km (longest in India). It is one of the most popular tourist regions in the country and was visited by 20 million domestic and international tourists in 2010-11. Gujarat offers scenic beauty from Great Rann of Kutch to the hills of Saputara. Gujarat is the one and only place to view pure Asiatic lions in the world. During the Sultanate reign, Hindu craftsmanship mixed with Islamic architecture, giving rise to the Indo-Saracenicstyle. Many structures in the state are built in this fashion. It is also the birthplace of Mahatma Gandhi and Sardar Vallabhbhai Patel, iconic figures of India's independence movement. Amitabh Bachchan is currently the brand ambassador of Gujarat Tourism. The ‘Khushboo Gujarat Ki' campaign by celebrity Amitabh Bachchan has increased tourism in Gujarat by 4 per cent per annum, twice that of national growth rate.
+Ahmedabad is considered   to be an ideal hub to cover all the destinations in Gujarat.
+</h3>
+  <p>hear is show the some beautiful place</p>
+	<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="hv.mp4" type="video/mp4">
+   </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 720; 
+} 
+
+
+</script> 
+
+</body>
+</html>

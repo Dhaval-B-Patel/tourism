@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style1.css">
+		
+		<script type="text/javascript">
+		
+		
+		function validate(){
+
+			var name=document.getElementById("name").value;
+			var email=document.getElementById("email").value;
+			var flag=0;
+
+			if(name==""){
+			document.getElementById("nerror").innerHTML="Enter Name";
+			flag=1;
+			}
+			else{
+			document.getElementById("nerror").innerHTML="";
+			}
+		
+			if(email==""){
+			document.getElementById("eerror").innerHTML="Enter Email";
+			flag=1;
+			}
+			else{
+			document.getElementById("eerror").innerHTML="";
+			}
+			if(flag==1){
+			return false;
+			}		
+			
+	    }
+	</script>
+		
+	</head>
+	<body>
+<!--==============================header=================================-->
+
+<header>
+		<title>GUJARAT TOURISM</title>
+</header>	
+
+<ul>
+  <li><a  href="home.html">Home</a></li>
+  <li><a  href="Gujarat.html">Tourism</a></li>
+  <li><a class="active" href="contactus.html">Contact US</a></li>
+  <li class="dropdown">
+  <button class="dropbtn" >Register/login</button>
+  <div class="dropdown-content">
+    <a href="login.html">Login</a>
+    <a href="register.html">register</a>
+  </div>
+</ul>
+	<br><br><br><br>
+		<center>
+		<h1>Contact Form</h1><br>
+<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+	<div class="row">
+		<label for="name"style="font-size:30px;">Your name:</label>
+		<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+	</div>
+	<div class="row">
+		<label for="email" style="font-size:30px;">Your email:</label>
+		<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+		<label id="eerror"></label><br />
+	</div>
+	<div class="row">
+		<label for="message" style="font-size:30px;">Your message:</label><br />
+		<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+	</div>
+	<input id="submit_button" type="submit" value="Send email" onclick="javascript:return validate();" style='font-size:30px;'" />
+</form>		
+</center>	
+	</div>
+	
+</body>
+</html>	

@@ -1,0 +1,118 @@
+html {
+	width: 100%;
+	color:white
+	
+
+}
+
+body {
+    margin: 0;
+	background-color:skyblue;
+	background: url("../animated_roar_of_lion.jpg") no-repeat ;
+
+
+}
+
+ul {
+    list-style-type: relative;
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    background-color: #f1f1f1;	
+}
+
+li a.active {
+    background-color: c44dff;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* style the header */ 
+header {
+
+	display:block;
+	position: relative;
+	min-height:30%;
+	background-size:100% 100%;
+	background-origin: content-head;
+   	background-image:url(../home.jpg);
+	font-size:100%;
+ 	font-color: yellow;
+	overflow: hidden;
+}
+.dropbtn {
+    background-color#000: 
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: gray}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #c44dff;
+}
+
+.bt {
+    background-color:#c44dff; 
+  
+    
+    border: black 2px;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+.bt:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+img{
+border:solid black;
+}
